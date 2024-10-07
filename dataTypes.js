@@ -1,0 +1,9 @@
+console.log(typeof "JS");
+console.log(typeof 120);
+console.log(typeof 2.233);
+console.log(typeof true);
+console.log(typeof false);
+console.log(typeof undefined);
+console.log(typeof null);
+console.log(typeof 9007199254740991n);
+console.log(typeof Symbol('Unique'));
