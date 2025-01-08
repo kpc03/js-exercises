@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+html, body{
+    height: 100%;
+    box-sizing: border-box;
+}
+button{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle uplift shadow */
+    transition: all 0.2s ease-in-out; /* Smooth transitions */
+    background-color: unset;
+}
+button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 
+                0 4px 6px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+                0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+    transform: translateY(1px); /* Slight downward movement */
+}
+#body{
+    background-color: #F6EEE0;
+    color: #A45C40;
+}
+#container{
+    height: 100%;
+}
+#counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#counter *{
+    font-family: "Bungee Shade", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+}
+.counterWrapper{
+    border: 10px solid  #E4B7A0;
+    border-radius: 10px;
+    height: 150px;
+    display: flex;
+}
+#increment, #decrement{
+    cursor: pointer;
+}
+#increment, #decrement, #showLabel{
+    min-width: 150px;
+    display: inline-block;
+    text-align: center;
+    color: #A45C40;
+    height: 100%;
+}
+#showLabel{
+    color: #A45C40;
+}
