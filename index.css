@@ -6,6 +6,7 @@
 html, body{
     height: 100%;
     box-sizing: border-box;
+    max-width: 100%;
 }
 button{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
@@ -29,6 +30,9 @@ button:active {
 }
 #container{
     height: 100%;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 #counter {
     display: flex;
@@ -40,23 +44,23 @@ button:active {
     font-family: "Bungee Shade", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
+    font-size: 80px;
 }
 .counterWrapper{
     border: 10px solid  #E4B7A0;
     border-radius: 10px;
-    height: 150px;
     display: flex;
+    width: 100%;
 }
 #increment, #decrement{
     cursor: pointer;
 }
 #increment, #decrement, #showLabel{
-    min-width: 150px;
-    display: inline-block;
+    width: 33%;
     text-align: center;
     color: #A45C40;
     height: 100%;
+    flex-grow: 1;
 }
 #showLabel{
     color: #A45C40;
