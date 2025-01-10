@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: "Montserrat", serif;
 }
 html, body{
     height: 100%;
@@ -12,13 +13,56 @@ html, body{
     font-weight: 500;
     font-style: normal;
 }
+html, #body{
+    background-color: #F6EEE0;
+    color: #A45C40;
+}
 h1{
     margin-bottom: 50px;
-    font-size: clamp(14px, 2.8vw, 40px);
+    font-size: clamp(20px, 2.8vw, 40px);
     width: 100%;
     display: block;
     text-align: center;
 }
+input{
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 18px;
+    max-width: 400px;
+}
+label{
+    font-size: 18px;
+}
+button{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle uplift shadow */
+    transition: all 0.2s ease-in-out; /* Smooth transitions */
+    background-color: unset;
+    border: 2px solid #A45C40;
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: #A45C40;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+}
+button:disabled{
+    cursor: not-allowed;
+    filter: opacity(0.5);
+}
+button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 
+                0 4px 6px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+                0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+    transform: translateY(1px); /* Slight downward movement */
+}
+
 #body{
     background-color: #F6EEE0;
     color: #A45C40;
@@ -41,4 +85,14 @@ h1{
     align-items: center;
     justify-content: center;
     margin-bottom: clamp(4px, 2vw, 24px);
+}
+.formControl{
+    margin-bottom: 24px;
+    display: block;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .formControl{
+        width: auto;
+    }
 }

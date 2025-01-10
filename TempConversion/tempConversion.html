@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Counter</title>
+    <title>Temperature Conversion</title>
     <link rel="stylesheet" href="../index.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
         *{
             padding: 0;
@@ -23,22 +23,65 @@
             font-weight: 500;
             font-style: normal;
         }
+        label{
+            font-size: 50px;
+        }
         #body{
             background-color: #F6EEE0;
-            color: #A45C40;
         }
         .container{
-            height: 100%;
-            padding: 20px;
-            max-width: 768px;
-            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;                 
+            }
+        }
+        .leftContainer, .rightContainer{
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .leftContainer, .rightContainer {
+                width: 100%;
+                height: 50vh;
+            }
+        }
+        .leftContainer{
+            color: #A45C40;
+        }
+        .rightContainer{
+            background-color: #A45C40;
+            color: #F6EEE0;
         }
         
     </style>
 </head>
 <body id="body">
     <div class="container">
-        <h1>Temperature Conversion</h1>
+        <div class="leftContainer">
+            <h1>Temperature Conversion</h1>
+            <div class="formControl">
+                <input id="userValue" type="number" placeholder="write the number to convert" value="" mandatory>
+            </div>
+            <div class="formControl">
+                <button id="btnCel">Convert to Celsius</button>
+            </div>
+            <div class="formControl">
+                <button id="btnFah">Convert to Fahrenheit</button>
+            </div>
+            
+        </div>
+        <div class="rightContainer">
+            <label id="showTemp">Enter a number to convert</label>
+        </div>
     </div>
     <script src="./tempConversion.js"></script> 
 </body>
