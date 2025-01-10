@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter</title>
+    <link rel="stylesheet" href="../index.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        button{
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                        0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle uplift shadow */
+            transition: all 0.2s ease-in-out; /* Smooth transitions */
+            background-color: unset;
+        }
+        button:hover {
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 
+                        0 4px 6px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+            transform: translateY(-2px); /* Slight upward movement */
+        }
+        button:active {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 
+                        0 1px 2px rgba(0, 0, 0, 0.1); /* Reduced shadow on click */
+            transform: translateY(1px); /* Slight downward movement */
+        }
+        html, body{
+            height: 100%;
+        }
+        html, #body{
+            background-color: #F6EEE0;
+            color: #A45C40;
+        }
+        #counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        #counter *{
+            font-family: "Bungee Shade", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 80px;
+        }
+        .container{
+            height: 100%;
+            padding: 20px;
+            max-width: 768px;
+            margin: 0 auto;
+        }
+        .counterWrapper{
+            border: 10px solid  #E4B7A0;
+            border-radius: 10px;
+            display: flex;
+            width: 100%;
+        }
+        #increment, #decrement{
+            cursor: pointer;
+        }
+        #increment, #decrement, #showLabel{
+            width: 33%;
+            text-align: center;
+            color: #A45C40;
+            height: 100%;
+            flex-grow: 1;
+        }
+        #showLabel{
+            color: #A45C40;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <div id="counter">
+            <div class="counterWrapper">
+                <button id="decrement">-</button>
+                <label id="showLabel">0</label>
+                <button id="increment">+</button>
+            </div>
+        </div>
+    </div>
+    <script src="./counter.js"></script> 
+</body>
+</html>
