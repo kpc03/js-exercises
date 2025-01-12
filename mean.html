@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arithmetic Mean</title>
+    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        h1,h2,p {
+            font-weight: bold; 
+        }
+        h2,h3{
+            margin-bottom: 12px;
+            color: #c5846b;
+        }
+        p{
+            margin-bottom: 12px;
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+        .amContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        button{
+            margin-top: 30px;
+        }
+        .resultContainer{
+            border-radius: 8px;
+            background-color: #A45C40;
+            padding: 20px;
+            width: 300px;
+            margin-top: 40px;
+            color: #F6EEE0;
+            font-weight: bold;
+            text-align: center;
+            height: px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .resultContainer p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="container">
+        <h1>Arithmetic Mean from an Array</h1>
+        <div class="amContainer">
+            <h2>Array Values</h2>
+            <h3 id="showArray"></h3>
+            <button id="meanBtn">Arithmetic Mean</button>
+            <div class="resultContainer">
+                <p id="sum">Result</p>
+                <p id="mean"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const numbers = [12,23,34,45,56,67,78,89,90];
+        function getArithmeticMean(){
+            const sumElem = document.getElementById("sum");
+            const meanElem = document.getElementById("mean");
+
+            let sum = 0;
+            let mean = 0;
+            const arrayLength = numbers.length;
+
+            numbers.forEach(function(item){
+                sum = sum + item;
+                mean = (sum/arrayLength).toFixed(2);  
+            })
+
+            sumElem.innerHTML = `Sum - ${sum}`;
+            meanElem.innerHTML = `Mean - ${mean}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const btn = document.getElementById("meanBtn");
+            const arrayElem = document.getElementById("showArray");
+            if(arrayElem){
+                arrayElem.innerHTML = `[${numbers.join(", ")}]`;
+            }
+
+            btn.addEventListener("click", function(){
+                getArithmeticMean();
+            })
+        });
+    </script>
+</body>
+</html>
