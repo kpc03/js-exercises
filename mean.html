@@ -77,8 +77,9 @@
 
             numbers.forEach(function(item){
                 sum = sum + item;
-                mean = (sum/arrayLength).toFixed(2);  
             })
+            
+            mean = (sum/arrayLength).toFixed(2);  
 
             sumElem.innerHTML = `Sum - ${sum}`;
             meanElem.innerHTML = `Mean - ${mean}`;
