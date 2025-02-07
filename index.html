@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <title>Practising JS</title>
     <link rel="stylesheet" href="index.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=optional" rel="stylesheet">
+    </noscript>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body id="body">
     <div id="container">
-        <h1>Javascript Exercises Demo Links</h1>
-        <div class="card">
-            <a href="./ApiIntegration/apiIntegration.html">Api Integration Example</a>
-       </div>
-       <div class="card">
-            <a href="./Counter/counter.html">Counter Exercise</a>
-       </div>
-       <div class="card">
-            <a href="./TempConversion/tempConversion.html">Temperature Conversion Demo</a>
-        </div>
-        <div class="card">
-            <a href="./mean.html">Arithmetic Mean</a>
+        <h1 class="text-3xl font-semibold mb-12">Javascript Exercises Demo Links</h1>
+        <div class="grid gap-4 grid-cols-3">
+            <div class="rounded overflow-hidden shadow-lg px-6 py-4 flex items-center justify-center justify-center">
+                <a class="text-xl font-semibold text-center" href="./ApiIntegration/apiIntegration.html">Api Integration Example</a>
+           </div>
+           <div class="rounded overflow-hidden shadow-lg px-6 py-4 flex items-center justify-center">
+                <a class="text-xl font-semibold text-center" href="./Counter/counter.html">Counter Exercise</a>
+           </div>
+           <div class="rounded overflow-hidden shadow-lg px-6 py-4 flex items-center justify-center">
+                <a class="text-xl font-semibold text-center" href="./TempConversion/tempConversion.html">Temperature Conversion Demo</a>
+            </div>
+            <div class="rounded overflow-hidden shadow-lg px-6 py-4 flex items-center justify-center">
+                <a class="text-xl font-semibold text-center" href="./mean.html">Arithmetic Mean</a>
+            </div>
+            <div class="rounded overflow-hidden shadow-lg px-6 py-4 flex items-center justify-center">
+                <a class="text-xl font-semibold text-center" href="./calculator.html">Calculator in Javascript</a>
+            </div>
         </div>
     </div>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="functionBasedQues.js"></script>
     <!-- <script src="ApiIntegration/apiIntegrationFetch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="ApiIntegration/apiIntegrationAxios.js"></script>

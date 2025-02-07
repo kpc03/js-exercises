@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator in JS</title>
+    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        h1,h2,p {
+            font-weight: bold; 
+        }
+        h2,h3{
+            margin-bottom: 12px;
+            color: #c5846b;
+        }
+        p{
+            margin-bottom: 12px;
+        }
+        p:last-child{
+            margin-bottom: 0;
+        }
+        button{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            padding: 9px;
+            border: 0;
+            color: #fff;
+            font-weight: bold;
+        }
+        .main{
+            width: 100%;
+            max-width: 350px;
+            background-color: #000;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            height: 510px;
+        }
+        .outputArea{
+            height: 30%;
+        }
+        .buttonsArea{ 
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .numbers{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 70%;
+            justify-content: space-evenly;
+        }
+        .numbers button {
+            background-color: #666;
+        }
+        .operators{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 30%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .operators button{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="container">
+        <h1>Calculator in Javascript</h1>
+        <main class="main">
+            <section class="outputArea">
+                Result
+            </section>
+            <section class="buttonsArea">
+                <div class="numbers">
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>0</button>
+                </div>
+                <div class="operators">
+                    <button>/</button>
+                    <button>*</button>
+                    <button>+</button>
+                    <button>-</button>
+                    <!-- <button>=</button> -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
